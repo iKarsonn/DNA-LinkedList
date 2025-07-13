@@ -8,6 +8,8 @@ private:
     Gen* ilkGen;
     Gen* sonGen;
 
+    Kromozom* sonrakiKromozom;
+
 public:
     Kromozom();
     ~Kromozom();
@@ -15,6 +17,12 @@ public:
     int getGenSayisi();
     Gen* getIlkGen();
     Gen* getSonGen();
+    Kromozom* getSonrakiKromozom();
+
+    
+    void setIlkGen(Gen*);
+    void setSonGen(Gen*);
+    void setSonrakiKromozom(Kromozom*);
 
     void genEkle(Gen*);  //Gen* ile listeye eleman ekleme
     void genEkle(char);  //veri ile listeye eleman ekleme

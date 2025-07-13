@@ -1,11 +1,12 @@
 #ifndef GEN_HPP
 #define GEN_HPP
+#include <iostream>
 
 class Gen {
 private:
     char veri;
-    Gen* sonraki;
-    Gen* onceki;
+    Gen* sonrakiGen;
+    Gen* oncekiGen;
 
 public:
     Gen(char);
@@ -13,11 +14,11 @@ public:
 
     char getVeri();
     
-    Gen* getSonraki();
-    Gen* getOnceki();
+    Gen* getSonrakiGen();
+    Gen* getOncekiGen();
 
-    void setSonraki(Gen*);
-    void setOnceki(Gen*);
+    void setSonrakiGen(Gen*);
+    void setOncekiGen(Gen*);
 
 };
 

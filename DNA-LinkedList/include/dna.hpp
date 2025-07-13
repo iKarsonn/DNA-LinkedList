@@ -12,11 +12,13 @@ public:
     Dna();
     ~Dna();
 
-    
+    int getKromozomSayisi();
+    Kromozom* getIlkKromozom();
+    Kromozom* getSonKromozom();
 
     void kromozomEkle(Kromozom*);  //DNAya kromozom eklemek icin
-    void kromozomCikar();  //Sondan kromozom cikarmak icin
-    void kromozomCikar(int);  //indis ile cikarmak icin
+    // void kromozomCikar();  //Sondan kromozom cikarmak icin
+    // void kromozomCikar(int);  //indis ile cikarmak icin
 
 };
 
