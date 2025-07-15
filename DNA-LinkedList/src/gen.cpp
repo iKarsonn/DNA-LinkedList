@@ -7,7 +7,7 @@ Gen::Gen(char veri){
 }
 
 Gen::~Gen(){
-    std::cout << "\nGen yikicisi cagirildi." << std::endl;
+    //std::cout << "\nGen yikicisi cagirildi." << std::endl;
     this->veri = ' ';
     this->sonrakiGen = nullptr;
     this->oncekiGen = nullptr;
@@ -23,6 +23,10 @@ Gen* Gen::getSonrakiGen(){
 
 Gen* Gen::getOncekiGen(){
     return this->oncekiGen;
+}
+
+void Gen::setVeri(char yeniVeri){
+    this->veri = yeniVeri;
 }
 
 void Gen::setSonrakiGen(Gen* yeniGen){

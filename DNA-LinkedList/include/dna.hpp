@@ -16,6 +16,7 @@ public:
     Kromozom* getIlkKromozom();
     Kromozom* getSonKromozom();
 
+    Kromozom* kromozomBul(int);
     void kromozomEkle(Kromozom*);  //DNAya kromozom eklemek icin
     // void kromozomCikar();  //Sondan kromozom cikarmak icin
     // void kromozomCikar(int);  //indis ile cikarmak icin

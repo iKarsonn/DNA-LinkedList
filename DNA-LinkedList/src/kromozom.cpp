@@ -8,7 +8,7 @@ Kromozom::Kromozom(){
 }
 
 Kromozom::~Kromozom(){
-    std::cout << "\nKromozom yikicisi cagirildi." << std::endl;
+    //std::cout << "\nKromozom yikicisi cagirildi." << std::endl;
     Gen* silinecek;
     while (ilkGen != nullptr)
     {
@@ -16,6 +16,22 @@ Kromozom::~Kromozom(){
         ilkGen = ilkGen->getSonrakiGen();
         delete silinecek;
     }
+}
+
+Gen* Kromozom::genBul(int indis){
+
+    if (indis < 0 || indis >= this->genSayisi)
+    {
+        return nullptr;
+    }
+
+    Gen* geciciGen = this->getIlkGen();
+
+    for (int i = 0; i < indis; i++)
+    {
+        geciciGen = geciciGen->getSonrakiGen();
+    }
+    return geciciGen;
 }
 
 void Kromozom::genEkle(Gen* yeniGen){  //Gen* ile listeye eleman ekleme
@@ -26,6 +42,7 @@ void Kromozom::genEkle(Gen* yeniGen){  //Gen* ile listeye eleman ekleme
     else {  //liste bos degilse
         this->sonGen->setSonrakiGen(yeniGen);
         this->sonGen->getSonrakiGen()->setOncekiGen(sonGen);
+        //yeniGen->setOncekiGen(sonGen);
         this->sonGen = yeniGen;
     }
     genSayisi++;

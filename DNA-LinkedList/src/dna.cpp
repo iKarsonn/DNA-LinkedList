@@ -7,7 +7,7 @@ Dna::Dna(){
 }
 
 Dna::~Dna(){
-    std::cout << "\nDna yikicisi cagirildi." << std::endl;
+    //std::cout << "\nDna yikicisi cagirildi." << std::endl;
     Kromozom* silinecek;
     while (this->ilkKromozom != nullptr)
     {
@@ -27,6 +27,23 @@ void Dna::kromozomEkle(Kromozom* yeniKromozom){
         this->sonKromozom = yeniKromozom;
     }
     this->kromozomSayisi++;
+}
+
+Kromozom* Dna::kromozomBul(int indis){
+
+    if (indis < 0 || indis >= this->kromozomSayisi)
+    {
+        return nullptr;
+    }
+    
+    Kromozom* geciciKromozom = getIlkKromozom();
+
+    for (int i = 0; i < indis; i++)
+    {
+        geciciKromozom = geciciKromozom->getSonrakiKromozom();
+    }
+    return geciciKromozom;
+
 }
 
 int Dna::getKromozomSayisi(){

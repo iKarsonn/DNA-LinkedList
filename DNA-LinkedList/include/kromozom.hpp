@@ -18,12 +18,13 @@ public:
     Gen* getIlkGen();
     Gen* getSonGen();
     Kromozom* getSonrakiKromozom();
-
     
     void setIlkGen(Gen*);
     void setSonGen(Gen*);
     void setSonrakiKromozom(Kromozom*);
-
+    
+    
+    Gen* genBul(int);
     void genEkle(Gen*);  //Gen* ile listeye eleman ekleme
     void genEkle(char);  //veri ile listeye eleman ekleme
     // void genCikar(int);  //Indisle eleman cikarma

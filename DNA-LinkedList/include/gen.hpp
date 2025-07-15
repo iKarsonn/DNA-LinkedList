@@ -17,6 +17,8 @@ public:
     Gen* getSonrakiGen();
     Gen* getOncekiGen();
 
+
+    void setVeri(char);
     void setSonrakiGen(Gen*);
     void setOncekiGen(Gen*);
 
