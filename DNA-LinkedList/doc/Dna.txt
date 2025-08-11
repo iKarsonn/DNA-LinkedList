@@ -1,5 +1,4 @@
 A B C D 
-E F 
-G H IB 
-    
-G H I B 
+F G E 
+I J H K L
+N O P M

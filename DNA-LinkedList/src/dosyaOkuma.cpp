@@ -1,5 +1,4 @@
 #include "dosyaOkuma.hpp"
-#include <algorithm>  // std::all_of için gerekli başlık
 
 DosyaOkuma::DosyaOkuma(){
 
@@ -10,7 +9,7 @@ DosyaOkuma::~DosyaOkuma(){
 
 }
 
-void DosyaOkuma::okuDosya(char* dosyaYolu, Dna* dna) {
+void DosyaOkuma::okuDosya(std::string dosyaYolu, Dna* dna) {
     std::ifstream dosya(dosyaYolu);
 
     if (!dosya) {
@@ -20,13 +19,11 @@ void DosyaOkuma::okuDosya(char* dosyaYolu, Dna* dna) {
 
     std::string satir;
     while (getline(dosya, satir)) {
-        // Satır boşsa geç
+        // Satır bossa gec
         if (satir.empty()) {
             continue;
         }
-        if (std::all_of(satir.begin(), satir.end(), ::isspace)) {
-            continue;  // Satır sadece boşluk karakterlerinden oluşuyorsa geç
-        }
+        
         std::istringstream ss(satir);
         char genBilgi;
 

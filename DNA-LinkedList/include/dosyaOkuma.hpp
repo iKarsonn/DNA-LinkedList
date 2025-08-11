@@ -12,7 +12,7 @@ public:
     DosyaOkuma();
     ~DosyaOkuma();
 
-    void okuDosya(char*, Dna*);
+    void okuDosya(std::string, Dna*);
 
 };
 
