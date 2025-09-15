@@ -9,24 +9,26 @@ Simulasyon::~Simulasyon(){
     delete this->dna;
 }
 
-void Simulasyon::ekranaBas(Dna* dna){
-    Kromozom* geciciKromozom = dna->getIlkKromozom();
-    Gen* geciciGen;
-    for (int i = 0; i < dna->getKromozomSayisi(); i++)
-    {
-        geciciGen = geciciKromozom->getIlkGen();
-        for (int i = 0; i < geciciKromozom->getGenSayisi(); i++)
-        {
-            std::cout << geciciGen->getVeri() << " ";
-            geciciGen = geciciGen->getSonrakiGen();
-        }
-        std::cout << geciciKromozom->getGenSayisi();
-        geciciKromozom = geciciKromozom->getSonrakiKromozom();
-        std::cout << std::endl;
-    }
-    //std::cout << dna->getKromozomSayisi();
-    std::cout << std::endl;
-}
+
+//Bu metod olusan kromzoomlarin genlerinin tamami ile birlikte gösterilmesini sagliyor
+// void Simulasyon::ekranaBas(Dna* dna){
+//     Kromozom* geciciKromozom = dna->getIlkKromozom();
+//     Gen* geciciGen;
+//     for (int i = 0; i < dna->getKromozomSayisi(); i++)
+//     {
+//         geciciGen = geciciKromozom->getIlkGen();
+//         for (int i = 0; i < geciciKromozom->getGenSayisi(); i++)
+//         {
+//             std::cout << geciciGen->getVeri() << " ";
+//             geciciGen = geciciGen->getSonrakiGen();
+//         }
+//         std::cout << geciciKromozom->getGenSayisi();
+//         geciciKromozom = geciciKromozom->getSonrakiKromozom();
+//         std::cout << std::endl;
+//     }
+//     //std::cout << dna->getKromozomSayisi();
+//     std::cout << std::endl;
+// }
 
 void Simulasyon::caprazla(Dna* dna, int kromozomIndis1, int kromozomIndis2){
     Kromozom* kromozom1 = dna->kromozomBul(kromozomIndis1);
@@ -251,9 +253,9 @@ void Simulasyon::simuleEt(){
         else if (secim == "5") {
             break;
         }
-        else if (secim == "6"){
-            ekranaBas(this->dna);
-        }
+        // else if (secim == "6"){
+        //     ekranaBas(this->dna);
+        // }
         else {
             
         }

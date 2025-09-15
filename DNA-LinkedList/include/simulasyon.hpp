@@ -8,18 +8,16 @@ class Simulasyon {
 private:
     Dna* dna;
 
-    
-    void ekranaBas(Dna*);
+    void caprazla(Dna*, int, int);
+    void mutasyon(Dna*, int, int);
+    void otomatikIslemler(std::string, Dna*);
+    void ekranaYaz(Dna*);
+    // void ekranaBas(Dna*);
 
 public:
     Simulasyon();
     ~Simulasyon();
     
-    void caprazla(Dna*, int, int);
-    void mutasyon(Dna*, int, int);
-    void otomatikIslemler(std::string, Dna*);
-    void ekranaYaz(Dna*);
-
     void simuleEt();
 
 };
